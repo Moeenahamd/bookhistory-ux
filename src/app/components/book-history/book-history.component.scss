@@ -1,0 +1,48 @@
+
+  .example-container {
+    width: 290px;
+    overflow: auto;
+  }
+  
+  table {
+    width: 100%;
+    overflow: auto;
+  }
+  th{
+    background: #F9F3EF !important;
+  }
+  th, td{
+    font-family: 'Montserrat', sans-serif
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+ 
+  @media only screen and (min-width: 376px) {
+    .example-container {
+        width: 320px;
+        overflow: auto;
+    }
+    .btn-create {
+      margin-bottom: 20px; 
+    }
+  }
+  @media only screen and (min-width: 391px) {
+    .example-container {
+        width: 340px;
+        overflow: auto;
+    }
+    .btn-create {
+      margin-bottom: 20px; 
+    }
+  }
+  @media only screen and (min-width: 415px) {
+    .example-container {
+        width: 100%;
+    }
+    .btn-create {
+      margin-top: 20px; 
+    }
+  }

@@ -1,0 +1,70 @@
+
+  .example-container {
+    width: 290px;
+    overflow: auto;
+    background: white !important;
+  }
+  
+  table {
+    width: 100%;
+    overflow: auto;
+    background: white !important;
+  }
+  th{
+    background: #F9F3EF !important;
+  }
+  th, td{
+    font-family: 'Montserrat', sans-serif
+  }
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  .mat-paginator-container{
+    
+    background: white!important;
+  }
+ 
+  @media only screen and (min-width: 376px) {
+    .example-container {
+        width: 320px;
+        overflow: auto;background: #F9F3EF !important;
+    }
+    .btn-create {
+      margin-bottom: 20px; 
+    }
+  }
+  @media only screen and (min-width: 391px) {
+    .example-container {
+        width: 340px;
+        overflow: auto;background: #F9F3EF !important;
+    }
+    .btn-create {
+      margin-bottom: 20px; 
+    }
+  }
+  @media only screen and (min-width: 415px) {
+    .example-container {
+        width: 100%;
+        overflow: auto;background: #F9F3EF !important;
+    }
+    .btn-create {
+      margin-top: 20px; 
+    }
+  }
+
+.btn-create {
+  margin-bottom: 20px;
+  background: #DAAA63; 
+  border-radius: 50px;
+  color:black;
+  float: right ;
+}
+
+.edit-icon {
+  color: #DAAA63;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.edit-icon svg {
+  fill:#DAAA63;
+}

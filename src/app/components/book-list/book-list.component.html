@@ -1,0 +1,99 @@
+<!-- <p>
+  <mat-toolbar style="background-color:transparent">
+    <button mat-raised-button (click)="openNew()" color="primary">{{newEditCaption}}</button>
+    <button mat-raised-button  color="accent">Delete</button>
+  </mat-toolbar>
+</p> -->
+
+
+<mat-form-field appearance="standard" style="width: 300px;">
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input />
+</mat-form-field>
+<button mat-raised-button class="btn-create" (click)="openNew()"><i class="fa fa-plus"></i> Add New Book</button>
+<ng-container *ngIf="booksAsMatTableDataSource$ | async as books">
+<section class="example-container mat-elevation-z8" tabindex="0">
+  <table mat-table [dataSource]="books" matSort>
+
+    <!-- <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? toggleAllRows() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()"
+                      (change)="$event ? toggleSelection(row) : null"
+                      [checked]="selection.isSelected(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container> -->
+  
+    <ng-container matColumnDef="key" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <td mat-cell *matCellDef="let row">{{row.key}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="isbn">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>ISBN</th>
+      <td mat-cell *matCellDef="let row">{{row.isbn}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+      <td mat-cell *matCellDef="let row">{{row.title}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="genre">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Genre</th>
+      <td mat-cell *matCellDef="let row">{{row.genre}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+      <td mat-cell *matCellDef="let row">{{row.description}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="publishedDate">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>publishedDate</th>
+      <td mat-cell *matCellDef="let row">{{row.publishedDate}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="authors">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Authors</th>
+      <td mat-cell *matCellDef="let row">{{row.authors}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions" >
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>
+        Actions
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <button mat-icon-button (click)="openNew(row)">
+          <mat-icon aria-label="Edit" class="edit-icon" >edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deleteSelectedBooks(row)">
+          <mat-icon aria-label="Delete" >delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">
+        No data matching the filter "{{input.value}}"
+      </td>
+    </tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page of books"
+  ></mat-paginator>
+</section>
+</ng-container>

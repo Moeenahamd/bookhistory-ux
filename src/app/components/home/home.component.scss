@@ -1,0 +1,82 @@
+.left-section{
+    font-family: Times New Roman, serif; 
+    padding-right : 7%!important;
+    padding-top: 3%;
+}
+.nav-button{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 25px;font-size: 27px;
+    height: 100px;
+    background-color: transparent;
+}
+.nav-link :hover {
+    background:  #DAAA63;
+}
+
+
+
+
+.nav-button :focus {
+    background-color: 1px solid #DAAA63;
+}
+
+.nav-button :active {
+    background-color: 1px solid #DAAA63;
+}
+.home-main{
+    padding: 5% 5% !important;
+}
+.row-top{
+    margin-top: 30%;
+}
+.left-section .h1{
+    font-family: Arial, 
+    sans-serif;color:white;
+    padding-top: 30%;
+    text-shadow: 4px 4px 4px gray;
+    font-size: 50px; 
+    font-weight: 800;
+}
+
+.left-section .p{
+    font-family: Arial, sans-serif;
+    color:white;text-shadow: 4px 4px 4px gray;font-size: 45px; 
+}
+@media only screen and (max-width: 415px) {
+    .nav-link{
+        text-align: center;
+    }
+    .left-section {
+        padding: 0px 2% !important
+    }
+    .left-section .h1{
+        
+        text-shadow: 3px 3px 4px gray;
+        font-size: 40px; 
+        font-weight: 400;
+    }
+    .left-section .p{
+        text-shadow: 4px 4px 4px gray;
+        font-size: 20px; 
+    }
+    .left-section .row{
+        margin-top: 0px; 
+    }
+    .nav-button{
+        border: 1px solid #DAAA63;
+        border-radius: 20px;
+        padding: 0px 17px;
+        font-size: 17px;
+        background-color: transparent;
+    }
+    .carousel{
+        padding: 0px !important;
+    }
+    .colum{
+        width: 100px !important;
+    }
+    .row-top{
+        margin-top: 0px !important;
+    }
+  }
