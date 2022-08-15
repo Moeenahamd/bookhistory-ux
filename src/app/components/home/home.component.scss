@@ -14,7 +14,18 @@
     background:  #DAAA63;
 }
 
-
+.colum1{
+    width: 125px !important;
+    margin-left: -40px;
+}
+.colum2{
+    width: 125px !important;
+    margin-left: 10px;
+}
+.colum3{
+    width: 125px !important;
+    margin-left: 10px;
+}
 
 
 .nav-button :focus {
@@ -30,10 +41,9 @@
 .row-top{
     margin-top: 30%;
 }
-.left-section .h1{
+.h1{
     font-family: Arial, 
     sans-serif;color:white;
-    padding-top: 30%;
     text-shadow: 4px 4px 4px gray;
     font-size: 50px; 
     font-weight: 800;
@@ -43,14 +53,56 @@
     font-family: Arial, sans-serif;
     color:white;text-shadow: 4px 4px 4px gray;font-size: 45px; 
 }
-@media only screen and (max-width: 415px) {
+  @media only screen and (max-width: 1190px) {
     .nav-link{
         text-align: center;
     }
     .left-section {
         padding: 0px 2% !important
     }
-    .left-section .h1{
+    .h1{
+        
+        text-shadow: 3px 3px 4px gray;
+        font-size: 40px; 
+        font-weight: 400;
+    }
+    .left-section .p{
+        text-shadow: 4px 4px 4px gray;
+        font-size: 20px; 
+    }
+    .left-section .row{
+        margin-top: 0px; 
+    }
+    .nav-button{
+        border: 1px solid black;
+        border-radius: 20px;
+        padding: 0px 17px;
+        font-size: 17px;
+        background-color: transparent;
+    }
+    .carousel{
+        padding: 0px !important;
+    }
+    .colum1{
+        width: 100px !important;
+    }
+    .colum2{
+        width: 100px !important;
+    }.colum3{
+        width: 100px !important;
+    }
+    .row-top{
+        margin-top: 0px !important;
+    }
+  }
+  @media only screen and (max-width: 415px) {
+    .nav-link{
+        text-align: center;
+    }
+    .left-section {
+        padding: 0px 2% !important
+    }
+    .h1{
         
         text-shadow: 3px 3px 4px gray;
         font-size: 40px; 
@@ -73,8 +125,16 @@
     .carousel{
         padding: 0px !important;
     }
-    .colum{
+    .colum1{
         width: 100px !important;
+        margin-left: -40px !important;
+    }
+    .colum2{
+        width: 100px !important;
+        margin-left: 0px !important;
+    }.colum3{
+        width: 100px !important;
+        margin-left: 0px !important;
     }
     .row-top{
         margin-top: 0px !important;

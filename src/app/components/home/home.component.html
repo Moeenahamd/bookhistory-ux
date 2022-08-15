@@ -1,7 +1,25 @@
 <div class="row home-main" style="background: #F9F3EF;height: 100vh !important;">
-    <div class="col-sm-6 left-section" style="text-align: center;">
-        
-        <p class="px-2 m-0">
+    <div class="col-md-6 d-flex align-items-start flex-column">
+            <div class="mb-auto" style="margin: auto !important;">
+                <img src="./../../../assets/thumb_Logo.png" width="250" height="70">
+            </div>
+            <div class="my-auto" style="margin: auto !important;">
+                <h1 class="px-2 h1">
+                    HISTORYBOOK
+                </h1>
+            </div>
+            <div class="mt-auto row" style="margin: auto !important;">
+                <span class="colum1">
+                    <a class="nav-link" [routerLink]="'/home'" routerLinkActive="active" (click)="checkHomePage(true)"><button class="nav-button" ><p class="m-0" style="height: 30px"><i class="fa fa-home"></i></p> Home</button></a>
+                </span>
+                <span class=" colum2">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="'/books'"  (click)="checkHomePage(false)"> <button  class="nav-button"><p class="m-0" style="height: 30px"><i class="fa fa-book"></i></p> Books </button></a>
+                </span>
+                <span class=" colum3">
+                    <a class="nav-link" [routerLink]="'/history'" routerLinkActive="active"  (click)="checkHomePage(false)"><button  class="nav-button"><p class="m-0" style="height: 30px"><i class="fa fa-history"></i></p> History </button></a>
+                </span>
+            </div>
+        <!-- <p class="px-2 m-0">
             <img src="./../../../assets/thumb_Logo.png" width="250" height="70">
         </p>
         <h1 class="px-2 h1">
@@ -18,9 +36,9 @@
             <div class="col-2 colum">
                 <a class="nav-link" [routerLink]="'/history'" routerLinkActive="active"  (click)="checkHomePage(false)"><button  class="nav-button"><p class="m-0" style="height: 30px"><i class="fa fa-history"></i></p> History </button></a>
               </div>
-        </div>
+        </div> -->
     </div>
-    <div id="demo" class="carousel slide col-sm-5" data-bs-ride="carousel">
+    <div id="demo" class="carousel slide col-md-5" data-bs-ride="carousel">
 
         <!-- Indicators/dots -->
         
